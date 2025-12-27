@@ -1,0 +1,19 @@
+#card{
+    background-color: rgb(47, 255, 238);
+    color: black;
+    height: 200px;
+    width: 200px;
+    border: none;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fail{
+    color: red;
+}
+.pass{
+    color: green;
+}

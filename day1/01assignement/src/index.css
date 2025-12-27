@@ -1,0 +1,28 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  color: aliceblue;
+}
+#root{
+  width: 100%;
+  height: 100%;
+  
+}
+
+#container{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hedding{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
