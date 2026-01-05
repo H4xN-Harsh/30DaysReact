@@ -1,0 +1,66 @@
+🟦 REACT – FRESHER-LEVEL REQUIRED SKILLS
+🔹 Core (NON-NEGOTIABLE)
+
+You must be confident in:
+
+JSX
+
+Functional components
+
+Props
+
+useState
+
+useEffect
+
+Conditional rendering
+
+Lists & keys
+
+Controlled forms
+
+Event handling
+
+Lifting state up
+
+Component reusability
+
+🔹 Routing & Structure
+
+React Router
+
+Dynamic routes
+
+Protected routes (auth based)
+
+Folder structure (components, pages, services)
+
+🔹 API & Data Handling
+
+Fetch / Axios
+
+Loading & error states
+
+Environment variables
+
+Handling async data
+
+Passing data between components
+
+🔹 Basic Optimization (Enough for fresher)
+
+Avoid unnecessary re-renders
+
+Dependency array in useEffect
+
+useMemo / useCallback (basic understanding only)
+
+🔹 Nice to Have (NOT mandatory now)
+
+Context API
+
+Redux Toolkit (basic idea)
+
+Lazy loading
+
+📌 Interviewers mostly ask Core + useEffect + Projects

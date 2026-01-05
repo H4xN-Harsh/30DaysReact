@@ -1,0 +1,116 @@
+🟩 BACKEND (NODE + EXPRESS) – MUST-HAVE
+🔹 Node.js Basics
+
+What is Node.js
+
+Event loop (basic idea)
+
+CommonJS vs ES modules
+
+Environment variables (dotenv)
+
+🔹 Express.js (VERY IMPORTANT)
+
+You must know:
+
+Create server
+
+Routing
+
+Middleware
+
+Request & response
+
+Error handling
+
+MVC structure
+
+REST API design
+
+🔹 MongoDB + Mongoose
+
+What is NoSQL
+
+CRUD operations
+
+Schema & models
+
+Relationships
+
+Pagination
+
+Filtering & sorting
+
+Indexing (basic idea)
+
+🔹 Authentication & Security (VERY IMPORTANT)
+
+Signup / login flow
+
+Password hashing (bcrypt)
+
+JWT authentication
+
+Protected routes
+
+Role-based access (basic)
+
+CORS
+
+📌 If you know auth well → huge plus point
+
+🟨 JAVASCRIPT (INTERVIEW FAVORITE)
+
+You must know:
+
+Scope
+
+Hoisting
+
+Closures
+
+this
+
+Callbacks
+
+Promises
+
+async / await
+
+Event loop
+
+Array methods (map, filter, reduce)
+
+Shallow vs deep copy
+
+Error handling
+
+🧪 PROJECT SKILLS (THIS GETS YOU HIRED)
+
+You should be able to:
+
+Build CRUD apps
+
+Connect frontend & backend
+
+Handle auth
+
+Deploy apps
+
+Explain trade-offs
+
+Debug issues
+
+📌 Projects > Certificates
+
+🧰 DEV TOOLS (BASIC)
+
+Git & GitHub
+
+REST APIs
+
+Postman
+
+VS Code
+
+Chrome DevTool
