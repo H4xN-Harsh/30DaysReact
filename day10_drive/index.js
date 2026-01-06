@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv');
 
-
-
+dotenv.config();
+const connectToDB = require('./config/db');
+connectToDB();
 
 
 // user router 
