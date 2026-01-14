@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const jwt = require('jsonwebtoken')
 const {body,validationResult} = require('express-validator')
 const bcrypt = require('bcrypt');
 // user model /user schema
@@ -51,7 +51,7 @@ router.post('/login',
                 message:'invalid'
             })
         }
-        const {username,password}=req.body();
+        const {username,password}=req.body;
         const user  = await userModel.findOne({
             username : username,
         })
@@ -66,6 +66,16 @@ router.post('/login',
                 message:'username or password is incorrect '
             })
         }
+        // json web token
+        const token = jwt.sign({
+            userId:user._id,
+            email:user.email,
+            username:user.username
+        },
+        process.env.JWT_SECRET,
+        )
+        res.cookie('token',token);
+        res.send('logged in')
     }
 )
 
