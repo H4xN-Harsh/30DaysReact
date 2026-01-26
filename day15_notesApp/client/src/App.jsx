@@ -1,11 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import PrevPage from "./pages/PrevPage";
+import TaskDetail from "./pages/TaskDetail";
 
-export default function App(){
+const App = () => {
   return (
-    <>
-      <Home/>
-      <PrevPage/>
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/notes/:id" element={<TaskDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default App;
