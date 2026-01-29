@@ -1,23 +1,52 @@
-import { useState } from "react";
-import { Link } from "react-router-dom"
+import React, { useState,useContext } from "react";
+import { Link,useNavigate } from "react-router-dom"
+// import axios from "axios";
+import {UserDataContext} from '../context/UserContext'
 export default function UserSignup(){
     const [firstname,setFirstname]=useState('');
     const [lastname,setLastname]=useState('');
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
-    const [userData,setUserData] = useState({});
-    
-    const submitHandler = (e)=>{
+    // const [userData,setUserData] = useState({});
+    const navigate = useNavigate();
+    const {user,setUser}=useContext(UserDataContext);
+    const submitHandler = async(e)=>{
         e.preventDefault();
-        setUserData({
-            fullname:{
+        const newUser={
+          fullname:{
                 firstname:firstname,
                 lastname:lastname
             },
             email:email,
             password:password
-        })
-        // console.log(userData)
+        }
+        // const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/register`,newUser)
+        // if(response.status===201){
+        //   const data = response.data;
+        //   setUser(data.user)
+        //   navigate('/home')
+        // }
+        try {
+          const res = await fetch("http://localhost:4000/users/register", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newUser),
+          });
+
+          if (!res.ok) {
+            throw new Error("Request failed");
+          }
+
+          const data = await res.json();
+          console.log(data);
+          setUser(data.user)
+          localStorage.setItem('token',data.token)
+          navigate('/home')
+          } catch (error) {
+            console.error(error.message);
+          }
         setLastname('');
         setFirstname('');
         setEmail('');
